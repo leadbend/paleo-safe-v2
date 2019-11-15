@@ -46,7 +46,7 @@ exports.onCreateNode = ({node, getNode, actions}, options) => {
         } else if (_.get(options, 'uglyUrls', false)) {
             url = path.join(fileNode.relativeDirectory, fileNode.name + '.html');
         } else {
-            url = createFilePath({node, getNode, basePath: "/",});
+            url = url;
         }
 
         createNodeField({node, name: "url", value: url});
